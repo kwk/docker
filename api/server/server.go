@@ -973,6 +973,7 @@ func postBuild(eng *engine.Engine, version version.Version, w http.ResponseWrite
 	job.Stdin.Add(r.Body)
 	job.Setenv("remote", r.FormValue("remote"))
 	job.Setenv("t", r.FormValue("t"))
+	job.Setenv("m", r.FormValue("m"))
 	job.Setenv("q", r.FormValue("q"))
 	job.Setenv("nocache", r.FormValue("nocache"))
 	job.Setenv("forcerm", r.FormValue("forcerm"))

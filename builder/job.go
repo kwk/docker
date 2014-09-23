@@ -31,6 +31,7 @@ func (b *BuilderJob) CmdBuild(job *engine.Job) engine.Status {
 	var (
 		remoteURL      = job.Getenv("remote")
 		repoName       = job.Getenv("t")
+		message        = job.Getenv("m")
 		suppressOutput = job.GetenvBool("q")
 		noCache        = job.GetenvBool("nocache")
 		rm             = job.GetenvBool("rm")
