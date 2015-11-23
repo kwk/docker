@@ -156,20 +156,24 @@ Then, you'll use Docker Compose to build and start them on your local system.
 
     The first time you run this, the build takes some time.
 
-6. Run the server containers on your local system.
+6. Create the `notarynet` docker network as it is required in the `docker-compose.yml`.
+
+        $ docker network create notarynet
+
+7. Run the server containers on your local system.
 
         $ docker-compose up -d
 
     Once the trust services are up, you'll setup a local version of the Docker
     Registry v2.
 
-7. Change to the `notarysandbox/distribution` directory.
+8. Change to the `notarysandbox/distribution` directory.
 
-8. Build the `sandboxregistry` server.
+9. Build the `sandboxregistry` server.
 
         $ docker build -t sandboxregistry .
 
-9. Start the `sandboxregistry` server running.
+10. Start the `sandboxregistry` server running.
 
         $ docker run -p 5000:5000 --name sandboxregistry sandboxregistry &
 
