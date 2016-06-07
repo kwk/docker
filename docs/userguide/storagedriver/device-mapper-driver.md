@@ -172,7 +172,7 @@ you how to configure a Docker host to use the `devicemapper` storage driver in a
 
 > **Caution:** If you have already run the Docker daemon on your Docker host and have images you want to keep, `push` them Docker Hub or your private Docker Trusted Registry before attempting this procedure.
 
-The procedure below will create a 90GB data volume and 4GB metadata volume to use as backing for the storage pool. It assumes that you have a spare block device at `/dev/xvdf` with enough free space to complete the task. The device identifier and volume sizes may be be different in your environment and you should substitute your own values throughout the procedure. The procedure also assumes that the Docker daemon is in the `stopped` state.
+The procedure below will create a 90GB data volume and 4GB metadata volume to use as backing for the storage pool. It assumes that you have a spare block device at `/dev/xvdf` with enough free space to complete the task. The device identifier and volume sizes may be different in your environment and you should substitute your own values throughout the procedure. The procedure also assumes that the Docker daemon is in the `stopped` state.
 
 1. Log in to the Docker host you want to configure and stop the Docker daemon.
 
